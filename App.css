@@ -1,0 +1,153 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap');
+
+:root{
+    --maincolor:#fff;
+    --mainlightcolor:rgba(235,235,235,0.5);
+    --maindimcolor:rgb(228,228,228);
+}
+
+body{
+    margin: 0%;
+    padding: 0%;
+    overflow: hidden;
+    box-sizing: border-box;
+}
+
+.container
+{
+    min-height: 100vh;
+    min-width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: var(--maincolor);
+    font-family: 'Poppins';
+}
+.blackscreen
+{
+    width: 100vw;
+    height: 100vh;
+    position: absolute;
+    pointer-events: none;
+    background-color:#1d131c ;
+}
+
+.music-container
+{
+    width:350px;
+    padding:35px 40px;
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    border-radius: 36px;
+    box-shadow: 0 0 20px #f1e4f01a,
+    0 0 40px #c0a7be1a,
+    0 0 80px #f1e4f01a;
+   z-index: 1999;
+   background-color: #1d131c;
+   font-weight: 600;
+}
+
+.music-artist-name
+{
+    color: var(--maindimcolor);
+    margin: 4px 0;
+    font-size: 1.2rem;
+    font-weight: 400;
+}
+.music-player
+{
+    margin: 0;
+    margin-bottom: 10px;
+    color: var(--mainlightcolor);
+}
+
+.music-head-name
+{
+    margin: 0 auto;
+    font-size: 1.5rem;
+    text-align: center;
+}
+
+#songimage
+{
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin: 18px 0;
+    position: relative;
+    cursor: pointer;
+    animation: animatesongimage  .5s linear infinite;
+}
+
+@keyframes animatesongimage 
+{
+    0%,100%
+    {
+        transform: scale(1);
+    }
+    50%
+    {
+        transform: scale(1.03);
+    }
+}
+
+.audiobar
+{
+     width: 100%;
+     margin-bottom: 16px;
+     height: 10px;
+     border-radius: 5px;
+     outline: none;
+     filter: hue-rotate(20deg);
+}
+.musictimerdiv
+{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    font-weight: 600;
+}
+.playbtn
+{
+    font-size: 32px;
+    margin: 8px 10px;
+    color: var(--maincolor);
+    font-weight: 400;
+}
+
+.musiccontrolers
+{
+    cursor: pointer;
+    font-size: 28px;
+    color: var(--maincolor);
+}
+
+.changebackbtn
+{
+    width:200px;
+    height: 15px;
+    background-color: #eee;
+    position: absolute;
+    border-radius: 12px 12px 0 0;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 10;
+    transition: .3s;
+    color: #eee;
+    cursor: pointer;
+    padding: 30px 0 0 0;
+    font-weight: 500;
+    text-align: center;
+}
+
+.changebackbtn:hover
+{
+    height: 30px;
+    color: #1d131c;
+}
+
